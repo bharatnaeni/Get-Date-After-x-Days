@@ -1,6 +1,6 @@
 const datepackage = require("date-fns/addDays");
-const modifiedDate = (days) => {
+const getDateAfterXDays = (days) => {
   const reuiredDate = datepackage(new Date(2020, 7, 22), days);
-  return "${modifiedDate.getDate()}-${modifiedDate.getMonth()+1}-${modifiedDate.getFullYear()}";
+  return "${reuiredDate.getDate()}-${reuiredDate.getMonth() + 1}-${reuiredDate.getFullYear()}";
 };
-module.imports = modifiedDate;
+module.exports = getDateAfterXDays;
